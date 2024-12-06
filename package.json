@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "./src/http/server.ts",
   "engines": {
-    "node": "21.6.2"
+    "node": "21"
   },
   "scripts": {
     "dev": "tsx watch ./src/http/server.ts",

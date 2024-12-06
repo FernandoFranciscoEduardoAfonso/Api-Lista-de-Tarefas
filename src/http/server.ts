@@ -19,8 +19,8 @@ app.register(allRoutes)
 
 
 const startServer = async ()=>{
-    const PORT = Number(process.env.SERVER_PORT)
-    app.listen({port: PORT, host:"127.0.0.1"}, (error, address)=>{
+    //PORT é a porta definida pelo render, se tiver uma, vamos usar e se não tiver usamos a porta 5555
+    app.listen({port: process.env.PORT? Number(process.env.PORT) : 3333, host:"0.0.0.0"}, (error, address)=>{
         if (error) 
             console.log(`Exists an error: ${error}`)
         
