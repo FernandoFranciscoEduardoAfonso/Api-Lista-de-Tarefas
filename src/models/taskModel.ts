@@ -199,8 +199,8 @@ export class Task{
         
                 this.closeConnection()
 
-                
-                if(oldTaskData?.completedAt) {
+                //se a tarefa não foi atualizada e já foi completada
+                if(!taskData.updatedAt && oldTaskData?.completedAt) {
                     const response : Result=  {success: true, message: "Esta Tarefa já foi concluida", data: user}
                     return response
                 }else{
