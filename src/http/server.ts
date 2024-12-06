@@ -11,7 +11,7 @@ const app = fastify()
 
 //rota principal
 app.get("/", (request, reply)=>{
-    return reply.send("Hello word").code(200)
+    return reply.send("Hello world").code(200)
 })
 
 //busca todas as outras rotas
